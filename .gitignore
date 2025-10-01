@@ -1,6 +1,6 @@
 ### IntelliJ IDEA ###
-./idea
-./Colonia_de_hormigasV1.iml
+.idea
+.Colonia_de_hormigasV1.iml
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
