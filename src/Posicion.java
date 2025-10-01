@@ -17,7 +17,7 @@ public class Posicion {
     }
 
     public boolean dentroLimites(int maxX, int maxY){
-        return x <= maxX && y <= maxY && x - maxX == 1 && y - maxX == 1;
+        return x >= 0 && x < maxX && y >= 0 && y < maxY;
     }
 
 

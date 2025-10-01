@@ -6,14 +6,14 @@ public class Hormiga  extends Thread{
     protected final TipoHormiga tipo;
     protected volatile Posicion posicion;
     protected volatile boolean activa;
-    protected final Random random;
+    protected final Random random = new Random();
     protected static final int[][] DIRECCIONES = new int[4][4];
 
 
-    public Hormiga(String id, TipoHormiga tipo, Random random) {
+    public Hormiga(String id, TipoHormiga tipo, Posicion posicion) {
         this.id = id;
         this.tipo = tipo;
-        this.random = random;
+        this.posicion = posicion;
     }
 
     public String getIdHormiga(){
