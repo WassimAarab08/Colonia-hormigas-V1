@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Hormiga {
+public class Hormiga  extends Thread{
 
     protected final String id;
     protected final TipoHormiga tipo;
