@@ -1,13 +1,19 @@
 import java.util.Random;
 
-public class Hormiga  extends Thread{
+public  abstract class   Hormiga  extends Thread{
 
     protected final String id;
     protected final TipoHormiga tipo;
     protected volatile Posicion posicion;
     protected volatile boolean activa;
     protected final Random random = new Random();
-    protected static final int[][] DIRECCIONES = new int[4][4];
+    protected static final int[][] DIRECCIONES = {
+            {0, 1},   // abajo
+            {0, -1},  // arriba
+            {1, 0},   // derecha
+            {-1, 0}   // izquierda
+    };
+
 
 
     public Hormiga(String id, TipoHormiga tipo, Posicion posicion) {
@@ -33,7 +39,7 @@ public class Hormiga  extends Thread{
     }
 
     public boolean isActiva(){
-        return activa;
+        return this.activa;
     }
 
 
