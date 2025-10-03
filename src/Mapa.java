@@ -68,9 +68,9 @@ public class Mapa {
     public void prepararMapa(HashMap<String, Hormiga> hormigas){
         for (int i = 0; i < ALTO; i++) {
             for (int j = 0; j < ANCHO; j++) {
-                if (i!= hormiguero.getY() && j!=hormiguero.getX()){
                 mapa[i][j] = VACIO;
-            }}}
+            }}
+        mapa[hormiguero.getY()][hormiguero.getX()] = HORMIGUERO;
         for (Hormiga hormiga : hormigas.values()){
            int x=hormiga.getPosicion().getX();
            int y=hormiga.getPosicion().getY();
