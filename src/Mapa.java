@@ -9,6 +9,12 @@ public class Mapa {
     public static final char HORMIGUERO = 'H';
 
 
+    /**
+     * El constructor es el encargado de inicializar el mapa vació con el hormiguero en medio para ello se
+     * recorre el array de mapa con un for anidado para filas y columnas del array y se rellena del símbolo Vació.
+     * También se calcula el medio del mapa dividiendo alto y ancho entre 2 para posicionar el hormiguero
+     * Complejidad Big O(n·m)
+     */
     public Mapa() {
         mapa = new char[ALTO][ANCHO];
         for (int i = 0; i < ALTO; i++) {
@@ -16,7 +22,6 @@ public class Mapa {
                 mapa[i][j] = VACIO;
             }
         }
-
         hormiguero = new Posicion(ALTO / 2, ANCHO / 2);
         mapa[hormiguero.getY()][hormiguero.getX()] = HORMIGUERO;
 
@@ -25,9 +30,22 @@ public class Mapa {
     public Posicion getHormiguero(){
         return hormiguero;
     }
+
+    /**
+     * Método que comprueba si la posición nueva va a estar dentro de los límites, llamando al método de dentroLimites de posición
+     * Complejidad Big 0(1)
+     * @param posicion
+     * @return
+     */
+
     public boolean dentroLimites(Posicion posicion){
        return posicion.dentroLimites(ANCHO, ALTO);
     }
+
+    /**
+     * Método que recorre el mapa actual y lo imprime en consola
+     * Complejidad de Big 0(n·m)
+     */
     public synchronized void mostrarMapa(){
         for (int i = 0; i < ALTO; i++) {
             for (int j = 0; j < ANCHO; j++) {
@@ -39,6 +57,14 @@ public class Mapa {
     }
 
 
+    /**
+     * Método que resetea el mapa a cero y coloca las hormigas en su sitio para ello recorre el mapa actual
+     * y sustituye cualquier cosa que no sea el hormiguero por el símbolo de vacío tras eso se recorre el HashMap
+     * de las hormigas y se recuperar su posición en el mapa y se posiciónan en su debido lugar en el array del mapa
+     * es decir se pone el símbolo que le corresponde al tipo de hormiga en su posición del mapa
+     * Complejidad de Big O(n·m+K)
+     * @param hormigas
+     */
     public void prepararMapa(HashMap<String, Hormiga> hormigas){
         for (int i = 0; i < ALTO; i++) {
             for (int j = 0; j < ANCHO; j++) {

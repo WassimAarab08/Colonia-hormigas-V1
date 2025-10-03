@@ -8,10 +8,10 @@ public  abstract class   Hormiga  extends Thread{
     protected volatile boolean activa;
     protected final Random random = new Random();
     protected static final int[][] DIRECCIONES = {
-            {0, 1},   // abajo
-            {0, -1},  // arriba
-            {1, 0},   // derecha
-            {-1, 0}   // izquierda
+            {1, 0},   // abajo
+            {-1, 0},  // arriba
+            {0, 1},   // derecha
+            {0, -1}   // izquierda
     };
 
 
