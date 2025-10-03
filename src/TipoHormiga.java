@@ -13,6 +13,13 @@ public enum TipoHormiga {
         this.nombre = nombre;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getSimbolo() {
+        return simbolo;
+    }
 }
 
 

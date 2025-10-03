@@ -6,7 +6,7 @@ public class Mapa {
     private final Posicion hormiguero  ;
     private final char[][] mapa ;
     public static final char VACIO = '*';
-    public static final char HORMIGUERO = 'O';
+    public static final char HORMIGUERO = 'H';
 
 
     public Mapa() {
@@ -40,7 +40,16 @@ public class Mapa {
 
 
     public void prepararMapa(HashMap<String, Hormiga> hormigas){
-
+        for (int i = 0; i < ALTO; i++) {
+            for (int j = 0; j < ANCHO; j++) {
+                if (i!= hormiguero.getY() && j!=hormiguero.getX()){
+                mapa[i][j] = VACIO;
+            }}}
+        for (Hormiga hormiga : hormigas.values()){
+           int x=hormiga.getPosicion().getX();
+           int y=hormiga.getPosicion().getY();
+           mapa[y][x]=hormiga.getTipo().getSimbolo().charAt(0);
+        }
 
     }
 }
