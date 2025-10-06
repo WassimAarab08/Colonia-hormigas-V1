@@ -58,10 +58,7 @@ public class Mapa {
 
 
     /**
-     * Método que resetea el mapa a cero y coloca las hormigas en su sitio para ello recorre el mapa actual
-     * y sustituye cualquier cosa que no sea el hormiguero por el símbolo de vacío tras eso se recorre el HashMap
-     * de las hormigas y se recuperar su posición en el mapa y se posiciónan en su debido lugar en el array del mapa
-     * es decir se pone el símbolo que le corresponde al tipo de hormiga en su posición del mapa
+     *  Resetea el mapa y coloca las hormigas en su posición correspondiente según su tipo.
      * Complejidad de Big O(n·m+K)
      * @param hormigas
      */
@@ -78,4 +75,8 @@ public class Mapa {
         }
 
     }
+
+
+
+
 }

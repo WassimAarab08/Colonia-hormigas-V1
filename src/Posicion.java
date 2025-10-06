@@ -21,7 +21,7 @@ public class Posicion {
 
 
     public Posicion mover(int deltaX, int deltaY){
-      return new Posicion(x+deltaX, y+deltaY);
+        return new Posicion(x+deltaX, y+deltaY);
     }
 
 
