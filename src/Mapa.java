@@ -22,7 +22,7 @@ public class Mapa {
                 mapa[i][j] = VACIO;
             }
         }
-        hormiguero = new Posicion(ALTO / 2, ANCHO / 2);
+        hormiguero = new Posicion(ANCHO / 2, ALTO / 2);
         mapa[hormiguero.getY()][hormiguero.getX()] = HORMIGUERO;
 
     }
@@ -75,8 +75,5 @@ public class Mapa {
         }
 
     }
-
-
-
 
 }

@@ -5,7 +5,7 @@ public  abstract class   Hormiga  extends Thread{
     protected final String id;
     protected final TipoHormiga tipo;
     protected volatile Posicion posicion;
-    protected volatile boolean activa;
+    protected volatile boolean activa =true;
     protected final Random random = new Random();
     protected static final int[][] DIRECCIONES = {
             {1, 0},   // abajo
