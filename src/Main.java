@@ -1,7 +1,15 @@
-public class Main {
 
+public class Main {
+    /**
+     * @author wassim aarab
+     * Metodo main donde se prueba todo la simulacion
+     */
     public static void main(String[] args) {
-      SimuladorColoniaHormigas simuladorColoniaHormigas =new SimuladorColoniaHormigas();
-        simuladorColoniaHormigas.ejecutar();
+        try {
+            SimuladorColoniaHormigas simuladorColoniaHormigas = new SimuladorColoniaHormigas();
+            simuladorColoniaHormigas.ejecutar();
+        } catch (Exception e) {
+            System.err.println("Error durante la ejecución: " + e.getMessage());
+        }
     }
 }

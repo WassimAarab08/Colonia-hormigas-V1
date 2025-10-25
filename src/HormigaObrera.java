@@ -1,23 +1,15 @@
 public class HormigaObrera extends Hormiga{
-    private SimuladorColoniaHormigas simulador = new SimuladorColoniaHormigas();
-    public HormigaObrera(String id, Posicion posicionInicial) {
-        super(id, TipoHormiga.OBRERA, posicionInicial);
+
+    /**
+     * Constructor de HormigaObrera que inicializa una hormiga con tipo OBRERA.
+     * @param id identificador único de la hormiga
+     * @param posicionInicial posición donde inicia la hormiga en el mapa
+     * @param simuladorColoniaHormigas referencia al simulador
+     */
+    public HormigaObrera(String id, Posicion posicionInicial ,SimuladorColoniaHormigas simuladorColoniaHormigas) {
+        super(id, TipoHormiga.OBRERA, posicionInicial,simuladorColoniaHormigas);
     }
 
-    @Override
-    public void run() {
 
-        while (activa) {
-            try {
-
-                simulador.moverHormigaAleatoriamente(this);
-                Thread.sleep(1900);
-
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-                break;
-            }
-        }
-    }
 
 }
