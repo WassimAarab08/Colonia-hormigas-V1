@@ -55,7 +55,10 @@ public class Mapa {
         }
         System.out.println("=========Leyendas========");
         System.out.println("Hormiguero => "+HORMIGUERO);
-        System.out.println("Hormiga obrera => o");
+
+        for (TipoHormiga tipo : TipoHormiga.values()) {
+            System.out.println(tipo.getNombre() + " => " + tipo.getSimbolo());
+        }
 
     }
 

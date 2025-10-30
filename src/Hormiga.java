@@ -43,7 +43,7 @@ public  abstract class   Hormiga  extends Thread{
                this.simuladorColoniaHormigas.moverHormigaAleatoriamente(this);
                 Thread.sleep(random.nextInt(INTERVALO_MAX_MOVIMIENTO));
             } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
+                System.out.println("Una hormiga murió debido a un error");
                 break;
             }
         }

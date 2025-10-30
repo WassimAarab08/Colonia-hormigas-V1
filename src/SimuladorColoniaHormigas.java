@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SimuladorColoniaHormigas {
     private static final  int  INTERVALO_ACTUALIZACION = 2000;
     private static final int NUMERO_OBRERAS = 5;
-    private static final int NUMERO_ITERACIONES = 5;
+    private static final int NUMERO_ITERACIONES = 50;
     private final Mapa mapa;
     private final HashMap<String, Hormiga> hormigas ;
     private volatile boolean simulacionActiva;
