@@ -51,7 +51,11 @@ public class Mapa {
                 System.out.printf(this.mapa[i][j]+" ");
             }
             System.out.println();
+
         }
+        System.out.println("=========Leyendas========");
+        System.out.println("Hormiguero => "+HORMIGUERO);
+        System.out.println("Hormiga obrera => o");
 
     }
 
